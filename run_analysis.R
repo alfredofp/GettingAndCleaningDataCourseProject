@@ -59,7 +59,7 @@ dataTrain$subject<- subjectTrain
 ## only columns related to mean or std are maintained in tidy dataset
 tidyTest <- dataTest[grep(".*[mM]ean.*|.*[sS]td.*|activity|subject", 
                           names(dataTest))]
-tidyTrain <- dataTest[grep(".*[mM]ean.*|.*[sS]td.*|activity|subject", 
+tidyTrain <- dataTrain[grep(".*[mM]ean.*|.*[sS]td.*|activity|subject", 
                           names(dataTrain))]
 
 ##and data is joined into one dataset.
