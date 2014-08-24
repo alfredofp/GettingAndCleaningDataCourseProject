@@ -19,6 +19,15 @@ The original data set is split into training and test sets (70% and 30%, respect
 * activity label
 * identifier of the subject
 
+##Main variables
+*activityLabels, character vector[1x6] containing tidy labels for activity.
+*properNames, character vector[1x561] containing tidy measurement names for each observation.
+*[test/train]ActivityLabels, character vector[1xlength(number of observations for dataset)] containing the activity corresponding to each observation, within activityLabels range.
+*data[Test/Train], dataframes [2947x563], [7352x563] containing observations for each measurement, two rows have been added to these dataframes, measurement name and subject.
+*tidy[Test/Train], dataframes [2947x88], [7352x88],obtained from both previous, in which only measurements related to mean or sdv are maintained.
+*tidyData, dataframe merge of both previous, [2947x88].
+*result, vector[180x88] containing the mean for each variable contained in tidyData by subject and activity.
+
 ##Getting and cleaning data
 If the data is not already available in the data directory, it is downloaded from UCI repository.
 
